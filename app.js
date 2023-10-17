@@ -8,13 +8,13 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const catalogRouter = require('./routes/catalog');
 const compression = require("compression");
-const helmet = require('hemlet');
+const helmet = require('helmet');
 const app = express();
 
 const RateLimit = require('express-rate-limit');
 const limiter = RateLimit({
   windowMS: 1 * 60 * 1000,
-  max: 20
+  max: 50
 });
 
 app.use(limiter);
