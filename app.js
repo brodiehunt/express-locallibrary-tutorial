@@ -22,7 +22,7 @@ app.use(limiter);
 // Mongo
 const mongoose = require('mongoose');
 mongoose.set("strictQuery", false);
-const mongoDB = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.1qdcw07.mongodb.net/local_library?retryWrites=true&w=majority`;
+const mongoDB = process.env.MONGODB_URI || `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.1qdcw07.mongodb.net/local_library?retryWrites=true&w=majority`;
 
 main()
   .then(() => console.log("Connected to the database"))
