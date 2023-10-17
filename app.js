@@ -11,13 +11,13 @@ const compression = require("compression");
 const helmet = require('helmet');
 const app = express();
 
-const RateLimit = require('express-rate-limit');
-const limiter = RateLimit({
-  windowMS: 1 * 60 * 1000,
-  max: 50
-});
+// const RateLimit = require('express-rate-limit');
+// const limiter = RateLimit({
+//   windowMS: 1 * 60 * 1000,
+//   max: 50
+// });
 
-app.use(limiter);
+// app.use(limiter);
 
 // Mongo
 const mongoose = require('mongoose');
